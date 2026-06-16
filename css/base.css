@@ -72,6 +72,10 @@ textarea {
   padding-block: var(--space-section);
 }
 
+#contact {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
 .section--alt {
   background: var(--color-off-white);
 }
@@ -105,7 +109,7 @@ textarea {
 .section-header h2 {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 400;
+  font-weight: var(--font-weight-heading);
   line-height: 1.15;
   color: var(--color-navy);
   margin-bottom: var(--space-tight);
@@ -129,6 +133,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: var(--font-weight-heading);
   line-height: 1.2;
+  font-synthesis: weight;
 }

@@ -54,8 +54,10 @@ body[data-page="home"] {
   max-width: 14ch;
   font-family: var(--font-serif);
   font-size: clamp(2rem, 5.5vw, 3.5rem);
+  font-weight: var(--font-weight-heading);
   line-height: 1.08;
   color: var(--color-navy);
+  font-synthesis: weight;
 }
 
 .hero-liquid__regions {

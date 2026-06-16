@@ -103,10 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Client logos grid */
 document.addEventListener("DOMContentLoaded", () => {
   const clientsGrid = document.getElementById("clients-grid");
-  if (!clientsGrid || !window.APEX_CLIENTS) return;
+  if (!clientsGrid) return;
+
+  const clientsByPage = {
+    signage: window.APEX_SIGNAGE_CLIENTS,
+    hygenix: window.APEX_HYGENIX_CLIENTS,
+  };
+  const clients = clientsByPage[document.body.dataset.page];
+  if (!clients?.length) return;
 
   const fragment = document.createDocumentFragment();
-  window.APEX_CLIENTS.forEach((file) => {
+  clients.forEach((file) => {
     const cell = document.createElement("div");
     cell.className = "client-logo reveal";
     const img = document.createElement("img");

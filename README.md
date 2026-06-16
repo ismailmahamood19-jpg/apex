@@ -6,7 +6,8 @@ Modern static website for Apex Global — 3 pages, built with HTML, CSS, and van
 
 | File | Description |
 |------|-------------|
-| `index.html` | Home — intro banner, vision, expertise, divisions, about, clientele, contact |
+| `index.html` | Home — intro banner, vision, expertise, divisions, about, contact |
+| `signage.html` / `hygenix.html` | Division pages — each includes its own clientele logos |
 | `signage.html` | Apex Signage product page |
 | `hygenix.html` | Apex Hygenix product page |
 

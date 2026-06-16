@@ -19,6 +19,7 @@
 
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
+  --font-weight-heading: 600;
 
   --space-tight: 0.5rem;
   --space-group: 1.25rem;

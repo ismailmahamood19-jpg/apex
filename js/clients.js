@@ -1,4 +1,4 @@
-window.APEX_CLIENTS = [
+window.APEX_SIGNAGE_CLIENTS = [
   "Screenshot-2026-01-05-112522.png",
   "Screenshot-2026-01-05-112604.png",
   "Screenshot-2026-01-05-112718.png",
@@ -23,6 +23,9 @@ window.APEX_CLIENTS = [
   "Screenshot-2026-01-06-123508.png",
   "Screenshot-2026-01-06-123537.png",
   "Screenshot-2026-01-06-144744.png",
+];
+
+window.APEX_HYGENIX_CLIENTS = [
   "Screenshot-2026-02-24-153318-1.png",
   "Screenshot-2026-02-24-153411-1.png",
   "Screenshot-2026-03-03-142832.png",

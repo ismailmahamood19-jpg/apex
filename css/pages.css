@@ -15,7 +15,7 @@
 .value-card h3 {
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-gold);
@@ -55,7 +55,7 @@
 .expertise-card h3 {
   font-family: var(--font-sans);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   color: var(--color-navy);
   margin-bottom: var(--space-tight);
 }
@@ -173,7 +173,7 @@
 /* About */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--space-block);
   align-items: start;
 }
@@ -186,12 +186,28 @@
   border-left: 4px solid var(--color-gold);
 }
 
+.founder-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: var(--font-weight-heading);
+  color: var(--color-navy);
+  margin: 0 0 var(--space-group);
+}
+
 .founder-card blockquote {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--color-muted);
-  margin-bottom: var(--space-group);
+  margin: 0 0 var(--space-group);
   font-style: italic;
+}
+
+.founder-card blockquote p {
+  margin: 0;
+}
+
+.founder-card blockquote p + p {
+  margin-top: 1rem;
 }
 
 .founder-card cite {
@@ -314,10 +330,36 @@
 
 .contact-form {
   background: var(--color-white);
-  padding: var(--space-group);
+  padding: 0;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.contact-form__label {
+  margin: 0;
+  padding: 14px 20px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  background: #eef0f3;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-form .form-group:first-of-type {
+  margin-top: var(--space-group);
+}
+
+.contact-form .form-group,
+.contact-form .btn {
+  margin-left: var(--space-group);
+  margin-right: var(--space-group);
+}
+
+.contact-form .btn {
+  margin-bottom: var(--space-group);
 }
 
 .form-group {
@@ -431,7 +473,7 @@
 .info-card h3 {
   font-family: var(--font-sans);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   color: var(--color-navy);
   margin-bottom: var(--space-tight);
 }
