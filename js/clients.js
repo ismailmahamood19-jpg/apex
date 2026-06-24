@@ -33,4 +33,5 @@ window.APEX_HYGENIX_CLIENTS = [
   "Screenshot-2026-04-13-163725.png",
   "Screenshot-2026-04-14-105004.png",
   "Screenshot-2026-04-14-105206.png",
+  "golden-chicken.png",
 ];

@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* Client logos grid */
+/* Client logos carousel */
 document.addEventListener("DOMContentLoaded", () => {
-  const clientsGrid = document.getElementById("clients-grid");
-  if (!clientsGrid) return;
+  const clientsTrack = document.getElementById("clients-grid");
+  if (!clientsTrack) return;
 
   const clientsByPage = {
     signage: window.APEX_SIGNAGE_CLIENTS,
@@ -112,38 +112,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const clients = clientsByPage[document.body.dataset.page];
   if (!clients?.length) return;
 
-  const fragment = document.createDocumentFragment();
-  clients.forEach((file) => {
+  const createLogoCell = (file) => {
     const cell = document.createElement("div");
-    cell.className = "client-logo reveal";
+    cell.className = "client-logo";
     const img = document.createElement("img");
     img.src = `assets/clients/${file}`;
     img.alt = "Client logo";
     img.loading = "lazy";
     cell.appendChild(img);
-    fragment.appendChild(cell);
-  });
-  clientsGrid.appendChild(fragment);
+    return cell;
+  };
+
+  clients.forEach((file) => clientsTrack.appendChild(createLogoCell(file)));
+  clients.forEach((file) => clientsTrack.appendChild(createLogoCell(file)));
 
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  if (prefersReducedMotion) {
-    clientsGrid.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
-    return;
+
+  if (!prefersReducedMotion) {
+    const duration = Math.max(clients.length * 2.8, 28);
+    clientsTrack.style.setProperty("--carousel-duration", `${duration}s`);
+    clientsTrack.classList.add("is-animating");
   }
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-  clientsGrid.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 });
 
 /* Scroll to top */
